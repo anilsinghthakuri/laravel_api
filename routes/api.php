@@ -23,3 +23,4 @@ Route::get('/data',[apicontroller::class,'get_data']);
 Route::get('/data/{id}',[apicontroller::class,'get_data_by_id']);
 Route::post('/data-insert',[apicontroller::class,'insert_data']);
 Route::put('/data-update',[apicontroller::class,'update_by_id']);
+Route::get('/data-search/{name}',[apicontroller::class,'search_by_name']);

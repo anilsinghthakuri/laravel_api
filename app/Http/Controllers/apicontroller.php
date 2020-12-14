@@ -56,4 +56,10 @@ class apicontroller extends Controller
             ];
         }
     }
+
+    public function search_by_name($name)
+    {
+        $data = Product::where('name',"like","%".$name."%")->get();
+        return $data;
+    }
 }
