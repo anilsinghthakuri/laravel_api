@@ -20,3 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/data',[apicontroller::class,'get_data']);
+Route::get('/data/{id}',[apicontroller::class,'get_data_by_id']);
