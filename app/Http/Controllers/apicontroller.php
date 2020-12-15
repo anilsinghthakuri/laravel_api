@@ -62,4 +62,19 @@ class apicontroller extends Controller
         $data = Product::where('name',"like","%".$name."%")->get();
         return $data;
     }
+
+    public function delete_by_id($id)
+    {
+        $status = Product::find($id)->delete();
+        if($status){
+            return[
+                'message'=>'data deleted',
+            ];
+        }
+        else{
+            return[
+            'message'=>'data not deleted',
+            ];
+        }
+    }
 }
